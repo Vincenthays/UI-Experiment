@@ -124,3 +124,9 @@ body {
     margin: 30px auto;
     width: 60vw;
 }
+
+@media (max-width: 700px) {
+    #script-details > .content {
+        width: 90vw;
+    }
+}
