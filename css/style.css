@@ -119,13 +119,12 @@ body {
 }
 
 #script-details > .content {
-    transform: translateX(-20px);
     background-color: white;
     margin: 30px auto;
-    width: 60vw;
+    width: 800px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     #script-details > .content {
         width: 90vw;
     }
