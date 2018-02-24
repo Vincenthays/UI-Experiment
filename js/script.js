@@ -7,7 +7,6 @@ let background = $('#background');
 settingsArea.click(() => settingsArea.addClass('active'));
 contentArea.click(() => settingsArea.removeClass('active'));
 card.click(() => {
-    console.log(scriptDetails.hasClass('active'));
     if (!settingsArea.hasClass('active')) {
         $(scriptDetails).addClass('active');
         background.addClass('active');
