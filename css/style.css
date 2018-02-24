@@ -104,14 +104,14 @@ body {
 #script-details {
     position: fixed;
     top: 0;
-    right: -20px;
+    /* right: -20px; */
     height: 100vh;
     width: 100vw;
     transform: translateY(110%);
+    background-color: rgba(0,0,0,0);
     transition: transform .7s;
     display: flex;
-    overflow-y: scroll;
-    background-color: rgba(0,0,0,0);
+    /* overflow-y: scroll; */
 }
 
 #script-details.active {
