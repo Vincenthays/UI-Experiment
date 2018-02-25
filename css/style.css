@@ -32,16 +32,15 @@ body {
     margin-bottom: 55px;
     display: flex;
     flex-direction: column;
+    width: 300px;
+    background-color: white;
 }
 
 #settings-panel .item {
     padding: 10px 0;
-    width: 300px;
     text-align: center;
-    border-radius: 5px;
-    margin: 10px;
-    background-color: white;
     border: 0px solid black;
+    border-bottom: 1px solid #CCCCCC;
 }
 
 .scroll {
@@ -58,6 +57,7 @@ body {
 }
 
 #content {
+    padding: 5px;
     padding-top: 70px;
     min-height: 100vh;
     box-sizing: border-box;
@@ -94,7 +94,7 @@ body {
     transition: opacity .7s, height 0s .5s, width 0s .5s;
 }
 
-#background.active {
+#script-details.active + #background {
     opacity: 1;
     height: 100vh;
     width: 100vw;
@@ -104,6 +104,7 @@ body {
 #script-details {
     position: fixed;
     top: 0;
+    z-index: 1;
     /* right: -20px; */
     height: 100vh;
     width: 100vw;
@@ -128,4 +129,73 @@ body {
     #script-details > .content {
         width: 90vw;
     }
+}
+
+#script-details > .content {
+    padding: 40px;
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-columns: auto 1fr auto;
+    grid-template: 
+        "title . run"           auto
+        "info info info"        auto
+        "output output output"  1fr;
+    grid-row-gap: 20px;
+}
+
+#script-details .title { 
+    grid-area: title;
+    font-weight: bolder;
+    font-size: 35px;
+    display: inline-flex;
+}
+
+#script-details .title .loader {
+    margin-left: 15px;
+    height: 25px;
+    width: 25px;
+}
+
+#script-details .btn-run { 
+    grid-area: run;
+    padding: 10px 25px;
+    background-color: #2ecc71;
+    border-width: 0px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    transition: .7s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#script-details .btn-run:hover { 
+    background-color: #29B765;
+}
+
+#script-details .btn-run i {
+    margin-left: 5px;
+}
+
+#script-details .info { 
+    grid-area: info;
+    margin-top: 20px;
+}
+
+#script-details .output { 
+    grid-area: output;
+    border: 1px solid #CCCCCC;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }

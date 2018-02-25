@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Manage scripts</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,8 +13,12 @@
         <div id="settings-panel">
             <div class="content">
                 <div class="list">
-                    <input type="text" class="item" placeholder="Pays">
-                    <div class="scroll">
+                    <input type="text" class="item" placeholder="Pays" data-live-search>
+                    <div class="scroll" data-items>
+                        <div class="item">Lorem ipsum dolor sit.</div>
+                        <div class="item">Lorem ipsum dolor sit.</div>
+                        <div class="item">Lorem ipsum dolor sit.</div>
+                        <div class="item">Lorem ipsum dolor sit.</div>
                         <div class="item">Lorem ipsum dolor sit.</div>
                         <div class="item">Lorem ipsum dolor sit.</div>
                         <div class="item">Lorem ipsum dolor sit.</div>
@@ -26,8 +31,12 @@
                     </div>
                 </div>
                 <div class="list">
-                    <input type="text" class="item" placeholder="Client">
-                    <div class="scroll">
+                    <input type="text" class="item" placeholder="Client" data-live-search>
+                    <div class="scroll" data-items>
+                        <div class="item">Lorem ipsum dolor sit.</div>
+                        <div class="item">Lorem ipsum dolor sit.</div>
+                        <div class="item">Lorem ipsum dolor sit.</div>
+                        <div class="item">Lorem ipsum dolor sit.</div>
                         <div class="item">Lorem ipsum dolor sit.</div>
                         <div class="item">Lorem ipsum dolor sit.</div>
                         <div class="item">Lorem ipsum dolor sit.</div>
@@ -51,12 +60,27 @@
         </div>
     </div>
 
-    <div id="background"></div>
     <div id="script-details" class="card">
         <div class="content">
-            
+            <div class="title">
+                Script title
+                <div class="loader"></div>
+            </div>
+            <div class="btn-run">
+                <div>
+                    Run
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="info">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsum voluptatum? Sit excepturi in deserunt numquam modi repellendus est debitis?
+            </div>
+            <div class="output">
+                
+            </div>
         </div>
     </div>
+    <div id="background"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="js/script.js"></script>

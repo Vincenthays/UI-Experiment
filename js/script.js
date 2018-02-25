@@ -9,12 +9,26 @@ contentArea.click(() => settingsArea.removeClass('active'));
 card.click(() => {
     if (!settingsArea.hasClass('active')) {
         $(scriptDetails).addClass('active');
-        background.addClass('active');
     }
 });
 scriptDetails.click(e => {
     if (e.target.id == 'script-details') {
         scriptDetails.removeClass('active');
-        background.removeClass('active');
     }
 });
+
+// live search
+$('input[data-live-search]').keyup(function() {
+    let search = $(this).val().toUpperCase();
+    // console.log(search);
+    
+    $(this)
+        .parent()
+        .children('[data-items]')
+        .children()
+        .each(function() {
+            if ($(this).text().toUpperCase().indexOf(search) == -1)     $(this).hide();
+            else                                                        $(this).show();
+        }
+    );
+})
